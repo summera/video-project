@@ -16,6 +16,9 @@
 		 <!--<track kind="captions" src="/video-js/captions.vtt" srclang="en" label="English">-->
 		</video>
 
+		<canvas id="myCanvas" width="200" height="100">
+		</canvas>
+
 		<script type="text/javascript">
 			//var myPlayer = _V_("video_id");
 			/*$('#video_id').bind('canplay', function() {
@@ -55,7 +58,7 @@
 					timeStamp.begin = video.currentTime;
 					$('#tag_box').show();
 					$('#submit_button').show();
-					//alert('begin Time: ' + timeStamp.begin)
+					alert('begin Time: ' + timeStamp.begin)
 				}
 			}
 
@@ -64,7 +67,7 @@
 				if (timeStamp.begin != null && timeStamp.end == null){
 					if (video.currentTime >= timeStamp.begin){
 						timeStamp.end = video.currentTime;
-						//alert('end Time: ' + timeStamp.end)
+						alert('end Time: ' + timeStamp.end)
 					}
 				}
 			}
@@ -96,8 +99,10 @@
 						$('#tag_box').hide();
 				}
 			}
+
 			
 			$(document).ready(function() {
+
 				$('#tag_box').hide();
 				$('#submit_button').hide();
 
